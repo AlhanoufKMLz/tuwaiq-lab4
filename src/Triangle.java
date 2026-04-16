@@ -3,7 +3,10 @@ public class Triangle extends Shape{
     private double base;
 
     //constructor
-    public Triangle(double height, double base) {
+    public Triangle(double height, double base) throws IllegalArgumentException{
+        if (height <= 0 || base <= 0) {
+            throw new IllegalArgumentException("Height and Base must be positive.");
+        }
         this.height = height;
         this.base = base;
     }
@@ -20,11 +23,17 @@ public class Triangle extends Shape{
 
 
     //setters
-    public void setHeight(double height) {
+    public void setHeight(double height) throws IllegalArgumentException{
+        if (height <= 0) {
+            throw new IllegalArgumentException("Height must be positive.");
+        }
         this.height = height;
     }
 
-    public void setBase(double base) {
+    public void setBase(double base) throws IllegalArgumentException{
+        if (base <= 0) {
+            throw new IllegalArgumentException("Base must be positive.");
+        }
         this.base = base;
     }
 

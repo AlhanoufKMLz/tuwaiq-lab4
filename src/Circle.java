@@ -2,7 +2,10 @@ public class Circle extends Shape{
     private double radius;
 
     //constructor
-    public Circle(double radius) {
+    public Circle(double radius) throws IllegalArgumentException{
+        if (radius <= 0) {
+            throw new IllegalArgumentException("Radius must be positive.");
+        }
         this.radius = radius;
     }
 
@@ -14,7 +17,10 @@ public class Circle extends Shape{
 
 
     //setter
-    public void setRadius(double radius) {
+    public void setRadius(double radius) throws IllegalArgumentException{
+        if (radius <= 0) {
+            throw new IllegalArgumentException("Radius must be positive.");
+        }
         this.radius = radius;
     }
 

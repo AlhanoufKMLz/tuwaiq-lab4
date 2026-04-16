@@ -10,9 +10,9 @@ public class Main {
         System.out.println("-----------setters & getters-----------");
         Circle c1 = new Circle(5);
         System.out.println(c1 + "\n");
+
         c1.setRadius(3);
         System.out.println("The radios after using setRadius(): " + c1.getRadius() + "\n");
-
 
         Rectangle r1 = new Rectangle(2,4);
         System.out.println(r1 + "\n");
@@ -27,6 +27,34 @@ public class Main {
         t1.setBase(3);
         System.out.println("The height after using setHeight(): " + t1.getHeight());
         System.out.println("The base after using setBase(): " + t1.getBase() + "\n");
+
+        System.out.println("***Trying to set negative numbers***");
+        try{
+            c1.setRadius(-1);
+        } catch (IllegalArgumentException e){
+            System.out.println(e.getMessage());
+        }
+        try{
+            r1.setHeight(-2);
+        } catch (IllegalArgumentException e){
+            System.out.println(e.getMessage());
+        }
+        try{
+            r1.setWidth(-3);
+        } catch (IllegalArgumentException e){
+            System.out.println(e.getMessage());
+        }
+        try{
+            t1.setHeight(-4);
+        } catch (IllegalArgumentException e){
+            System.out.println(e.getMessage());
+        }
+        try{
+            t1.setBase(-5);
+        } catch (IllegalArgumentException e){
+            System.out.println(e.getMessage());
+        }
+
 
 
         System.out.println("\n-----------abstract methods-----------");
@@ -46,6 +74,8 @@ public class Main {
                         System.out.println(circle + "\n");
                     } catch (InputMismatchException e){
                         System.out.println("Invalid input. Please enter a number.\n");
+                    } catch (IllegalArgumentException e){
+                        System.out.println(e.getMessage());
                     }
                     break;
                 case "2":
@@ -56,8 +86,10 @@ public class Main {
                         double width = input.nextInt();
                         Rectangle rectangle = new Rectangle(height, width);
                         System.out.println(rectangle + "\n");
-                    }catch (InputMismatchException e){
+                    } catch (InputMismatchException e){
                         System.out.println("Invalid input. Please enter a number.\n");
+                    } catch (IllegalArgumentException e){
+                        System.out.println(e.getMessage());
                     }
                     break;
                 case "3":
@@ -68,8 +100,10 @@ public class Main {
                         double base = input.nextInt();
                         Triangle triangle = new Triangle(triangleHeight, base);
                         System.out.println(triangle + "\n");
-                    }catch (InputMismatchException e){
+                    } catch (InputMismatchException e){
                         System.out.println("Invalid input. Please enter a number.\n");
+                    } catch (IllegalArgumentException e){
+                        System.out.println(e.getMessage());
                     }
                     break;
                 default:
