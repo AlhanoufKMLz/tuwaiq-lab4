@@ -43,10 +43,11 @@ public class Rectangle extends Shape{
 
     //to string
     public String toString(){
-        return "Rectangle: " + "\n" +
-                "   * Height: " + height + "\n" +
-                "   * Width: " + width + "\n" +
-                "   * Area: " + calculateArea() + "\n" +
-                "   * Perimeter: " + calculateCircumference();
+        return String.format("Rectangle: %n" +
+                        "   * Height: %.2f%n" +
+                        "   * Width: %.2f%n" +
+                        "   * Area: %.2f%n" +
+                        "   * Perimeter: %.2f",
+                height, width, calculateArea(), calculateCircumference());
     }
 }

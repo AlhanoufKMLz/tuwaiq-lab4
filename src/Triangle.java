@@ -43,10 +43,11 @@ public class Triangle extends Shape{
 
     //to string
     public String toString(){
-        return "Triangle: " + "\n" +
-                "   * Height: " + height + "\n" +
-                "   * Base: " + base + "\n" +
-                "   * Area: " + calculateArea() + "\n" +
-                "   * Perimeter: " + calculateCircumference();
+        return String.format("Triangle: %n" +
+                        "   * Height: %.2f%n" +
+                        "   * Base: %.2f%n" +
+                        "   * Area: %.2f%n" +
+                        "   * Perimeter: %.2f",
+                height, base, calculateArea(), calculateCircumference());
     }
 }

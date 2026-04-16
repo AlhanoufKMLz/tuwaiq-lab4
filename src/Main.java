@@ -22,7 +22,7 @@ public class Main {
         System.out.println("The width after using setWidth(): " + r1.getWidth() + "\n");
 
         Triangle t1 = new Triangle(2,4);
-        System.out.println(t1);
+        System.out.println(t1 + "\n");
         t1.setHeight(4);
         t1.setBase(3);
         System.out.println("The height after using setHeight(): " + t1.getHeight());
@@ -43,8 +43,7 @@ public class Main {
                     try{
                         double radius = input.nextInt();
                         Circle circle = new Circle(radius);
-                        System.out.println("Circle Area: " + circle.calculateArea());
-                        System.out.println("Circle Circumference: " + circle.calculateCircumference() + "\n");
+                        System.out.println(circle + "\n");
                     } catch (InputMismatchException e){
                         System.out.println("Invalid input. Please enter a number.\n");
                     }
@@ -56,8 +55,7 @@ public class Main {
                         System.out.print("Please enter the rectangle width: ");
                         double width = input.nextInt();
                         Rectangle rectangle = new Rectangle(height, width);
-                        System.out.println("Rectangle Area: " + rectangle.calculateArea());
-                        System.out.println("Rectangle Perimeter: " + rectangle.calculateCircumference() + "\n");
+                        System.out.println(rectangle + "\n");
                     }catch (InputMismatchException e){
                         System.out.println("Invalid input. Please enter a number.\n");
                     }
@@ -69,8 +67,7 @@ public class Main {
                         System.out.print("Please enter the triangle base: ");
                         double base = input.nextInt();
                         Triangle triangle = new Triangle(triangleHeight, base);
-                        System.out.println("Triangle Area: " + triangle.calculateArea());
-                        System.out.println("Triangle Perimeter: " + triangle.calculateCircumference() + "\n");
+                        System.out.println(triangle + "\n");
                     }catch (InputMismatchException e){
                         System.out.println("Invalid input. Please enter a number.\n");
                     }
