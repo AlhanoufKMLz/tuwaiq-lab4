@@ -29,4 +29,13 @@ public class Circle extends Shape{
     public double calculateCircumference() {
         return 2 * Math.PI;
     }
+
+
+    //to string
+    public String toString(){
+        return "Circle: " + "\n" +
+                "   * Radius: " + radius + "\n" +
+                "   * Area: " + calculateArea() + "\n" +
+                "   * Circumference: " + calculateCircumference();
+    }
 }

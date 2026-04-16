@@ -39,4 +39,14 @@ public class Rectangle extends Shape{
     public double calculateCircumference() {
         return 2 * (width + height);
     }
+
+
+    //to string
+    public String toString(){
+        return "Rectangle: " + "\n" +
+                "   * Height: " + height + "\n" +
+                "   * Width: " + width + "\n" +
+                "   * Area: " + calculateArea() + "\n" +
+                "   * Perimeter: " + calculateCircumference();
+    }
 }

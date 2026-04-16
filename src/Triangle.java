@@ -39,4 +39,14 @@ public class Triangle extends Shape{
     public double calculateCircumference() {
         return 3 * base;
     }
+
+
+    //to string
+    public String toString(){
+        return "Triangle: " + "\n" +
+                "   * Height: " + height + "\n" +
+                "   * Base: " + base + "\n" +
+                "   * Area: " + calculateArea() + "\n" +
+                "   * Perimeter: " + calculateCircumference();
+    }
 }
